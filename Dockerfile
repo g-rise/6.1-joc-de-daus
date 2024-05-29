@@ -6,4 +6,4 @@ COPY . /home/app
 
 EXPOSE 3001
 
-CMD ["node", "/home/app/app.ts"]
+CMD ["node", "src/app.ts"]
