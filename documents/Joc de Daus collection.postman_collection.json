@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "281a9a31-7561-4c54-b90f-5e3c3d2a6c6f",
+		"name": "Joc de Daus collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34195777"
+	},
+	"item": [
+		{
+			"name": "POST/players -->Riccardo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Riccardo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"players"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Aldo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/players --> Anònim",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/players --> Leonardo da Vinci",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Leonardo da Vinci\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/players (with success rate)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT/players/1 --> \"name\"",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Paolo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/players/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"players",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/1 --> 1ª Jugada player 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/1 --> 2ª Jugada player 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/2 --> 1ª Jugada player 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/2 --> 2ª Jugada player 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 1ª Jugada player 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 2ª Jugada player 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 3ª Jugada player 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/games/1 --> Jugades Player 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/games/2 --> Elimina totes jugades Player 2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ranking --> Players ordenats per success rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/ranking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ranking/winner --> Player amb millor Success rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/ranking/winner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ranking/loser --> Player amb pitjor Success rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/ranking/loser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"ranking",
+						"loser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
