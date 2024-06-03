@@ -55,9 +55,7 @@ describe('FindPlayerByName with MySqlPlayerRepository', () => {
       name: playerName,
       register: new Date()
     } as IPlayer
-    jest
-      .spyOn(playerRepository, 'findPlayerByName')
-      .mockResolvedValue(mockPlayer)
+    jest.spyOn(playerRepository, 'findPlayerByName').mockResolvedValue(mockPlayer)
 
     Player.create(mockPlayer)
   })

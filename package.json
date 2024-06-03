@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest",
+    "build": "npx tsc",
     "dev1": "npx ts-node src/app.ts",
-    "dev": "npx ts-node-dev src/app.ts"
+    "dev": "npx ts-node-dev src/app.ts",
+    "start": "npx dist/app.js"
   },
   "author": "",
   "license": "ISC",

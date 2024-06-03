@@ -14,10 +14,8 @@ const playerCreator = new PlayerCreator(mysqlPlayerRepository)
 const findPlayerById = new FindPlayerById(mysqlPlayerRepository)
 const findPlayerByName = new FindPlayerByName(mysqlPlayerRepository)
 const modifyPlayerName = new ModifyPlayerName(mysqlPlayerRepository)
-// eslint-disable-next-line prettier/prettier
 const getAllPlayersAndSuccess = new GetAllPlayersAndSuccess(mysqlPlayerRepository)
 
-// eslint-disable-next-line prettier/prettier
 const playerController = new PlayerController(playerCreator, findPlayerById, findPlayerByName, modifyPlayerName, getAllPlayersAndSuccess)
 
 const playerRouter = Router()

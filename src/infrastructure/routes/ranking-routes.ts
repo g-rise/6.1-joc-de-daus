@@ -11,16 +11,12 @@ const mySqlRankingRepository = new MySqlRankingRepository()
 const getRankings = new GetRankings(mySqlRankingRepository)
 const getWinner = new GetWinner(mySqlRankingRepository)
 const getLoser = new GetLoser(mySqlRankingRepository)
-// eslint-disable-next-line prettier/prettier
 const rankingController = new RankingController(getRankings, getWinner, getLoser)
 
 const rankingRouter = Router()
 
-// eslint-disable-next-line prettier/prettier
 rankingRouter.get('/', rankingController.getRankingAndAverage.bind(rankingController))
-// eslint-disable-next-line prettier/prettier
 rankingRouter.get('/winner', rankingController.getWinnerPlayer.bind(rankingController))
-// eslint-disable-next-line prettier/prettier
 rankingRouter.get('/loser', rankingController.getLoserPlayer.bind(rankingController))
 
 export default rankingRouter

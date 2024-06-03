@@ -3,8 +3,7 @@ import sequelize from '../../database/MySql/config.sql'
 import IPlayer from '../../../domain/player/IPlayer'
 import Game from './game.model'
 
-interface PlayerCreationAttributes
-  extends Optional<IPlayer, 'id' | 'register'> {}
+interface PlayerCreationAttributes extends Optional<IPlayer, 'id' | 'register'> {}
 
 class Player extends Model<PlayerCreationAttributes> implements IPlayer {
   public id!: number

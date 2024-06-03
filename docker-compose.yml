@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Joc_svc
+    ports:
+      - 3001:3001
+    links:
+      - mysqlDB
+    depends_on:
+      - mysqlDB
+
+  mysqlDB:
+    image: mysql:latest
+    container_name: mysqlDB
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: joc_de_daus
+      MYSQL_USER: joc 
+      MYSQL_PASSWORD: 7
+    ports:
+      - 3307:3306
+    volumes:
+      - mysqldata:/var/lib/mysql
+
+volumes: 
+  mysqldata:
