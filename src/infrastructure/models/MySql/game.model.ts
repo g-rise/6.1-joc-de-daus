@@ -2,8 +2,7 @@ import { DataTypes, Model, Optional } from 'sequelize'
 import sequelize from '../../database/MySql/config.sql'
 import IGame from '../../../domain/game/IGame'
 
-export interface GameCreationAttributes
-  extends Optional<IGame, 'id' | 'createdAt'> {}
+export interface GameCreationAttributes extends Optional<IGame, 'id' | 'createdAt'> {}
 
 class Game extends Model<IGame, GameCreationAttributes> implements IGame {
   public id!: number

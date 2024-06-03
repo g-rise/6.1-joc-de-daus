@@ -14,7 +14,7 @@ const playGame = new PlayGame(mySqlGameRepository)
 const findPlayerById = new FindPlayerById(mysqlPlayerRepository)
 const listAllGamesForPlayer = new ListAllGamesForPlayer(mySqlGameRepository)
 const deleteAllGames = new DeleteAllGames(mySqlGameRepository)
-// eslint-disable-next-line prettier/prettier
+
 const gameController = new GameController(playGame, findPlayerById, listAllGamesForPlayer, deleteAllGames)
 
 const gameRouter = Router()

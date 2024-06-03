@@ -35,7 +35,7 @@ export class MySqlPlayerRepository implements IPlayerRepository {
       ]
     })
 
-    const playersWithSuccessRate = players.map((player) => {
+    const playersWithSuccessRate = players.map(player => {
       const gamesTotals: Game[] = player.games || []
       const successPercent: number = successRateCalculator(gamesTotals)
 

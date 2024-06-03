@@ -16,11 +16,9 @@ export class MySqlRankingRepository implements IRankingRepository {
         }
       ]
     })
-    const playersWithGames = players.filter(
-      (player) => player.games?.length !== 0
-    )
+    const playersWithGames = players.filter(player => player.games?.length !== 0)
 
-    const playersWithSuccessRate = playersWithGames.map((player) => {
+    const playersWithSuccessRate = playersWithGames.map(player => {
       const gamesTotals: Game[] = player.games || []
       const successPercent: number = successRateCalculator(gamesTotals)
 
@@ -37,7 +35,7 @@ export class MySqlRankingRepository implements IRankingRepository {
 
     const totalGames = await Game.findAll()
     console.log(totalGames.length)
-    const winGames = totalGames.filter((game) => game.result === 'WIN')
+    const winGames = totalGames.filter(game => game.result === 'WIN')
     console.log(winGames.length)
     // eslint-disable-next-line prettier/prettier
     const averageSuccRate = +((winGames.length / totalGames.length) * 100).toFixed(2)

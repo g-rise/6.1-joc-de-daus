@@ -9,7 +9,7 @@ const dbConnection = async () => {
     console.log('Connexió realitzada amb la base de dades')
     defineAssociations()
     // Verificació dels models de sequelize
-    const models = sequelize.modelManager.models.map((model) => model.name)
+    const models = sequelize.modelManager.models.map(model => model.name)
     console.log('Models:', models)
   } catch (error) {
     console.error('No es pot connectar amb la base de dades:', error)

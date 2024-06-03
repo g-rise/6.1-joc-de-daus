@@ -22,13 +22,11 @@ describe('ModifyPlayerName with MySqlPlayerRepository', () => {
 
     Player.create(mockPlayer)
     jest.spyOn(playerRepository, 'findPlayerById').mockResolvedValue(mockPlayer)
-    jest
-      .spyOn(playerRepository, 'updatePlayerName')
-      .mockImplementation(async (id: number, name: string) => {
-        if (mockPlayer.id === id) {
-          mockPlayer.name = name
-        }
-      })
+    jest.spyOn(playerRepository, 'updatePlayerName').mockImplementation(async (id: number, name: string) => {
+      if (mockPlayer.id === id) {
+        mockPlayer.name = name
+      }
+    })
   })
 
   test('It should change the name of player', async () => {
@@ -38,10 +36,7 @@ describe('ModifyPlayerName with MySqlPlayerRepository', () => {
 
     await modifyPlayerName.run(playerId, newName)
 
-    expect(playerRepository.updatePlayerName).toHaveBeenCalledWith(
-      playerId,
-      newName
-    )
+    expect(playerRepository.updatePlayerName).toHaveBeenCalledWith(playerId, newName)
     // verifico el nou nom del jugador
     const updatedPlayer = await playerRepository.findPlayerById(playerId)
     console.log(updatedPlayer)
