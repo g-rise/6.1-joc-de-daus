@@ -21,9 +21,7 @@ export class GameController {
         const newGame = await this.playGame.run(id)
         res.status(201).json(newGame)
       } else {
-        res
-          .status(400)
-          .json({ message: "No s'ha trobat cap usuari amb aquest id" })
+        res.status(400).json({ message: "No s'ha trobat cap usuari amb aquest id" })
       }
     } catch (error) {
       res.status(500).json({ message: 'Error interno del servidor' })
@@ -35,9 +33,7 @@ export class GameController {
       const id: number = +req.params.id
       const player = await this.findPlayerById.run(id)
       if (player === null) {
-        res
-          .status(404)
-          .json({ message: `No s'ha trobat el jugador amb id: ${id}` })
+        res.status(404).json({ message: `No s'ha trobat el jugador amb id: ${id}` })
       }
       const games = await this.listAllGamesForPlayer.run(id)
       if (player !== null && games.length === 0) {
@@ -58,9 +54,7 @@ export class GameController {
       const player = await this.findPlayerById.run(id)
       console.log(id)
       if (player === null) {
-        res
-          .status(404)
-          .json({ message: `No s'ha trobat el jugador amb id: ${id}` })
+        res.status(404).json({ message: `No s'ha trobat el jugador amb id: ${id}` })
       } else {
         await this.deleteAllGames.run(id)
         res.status(200).json({

@@ -1,18 +1,6 @@
-version: '3.8'
+# version: '3.8'
 
 services:
-  
-  backend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: Joc_svc
-    ports:
-      - 3001:3001
-    links:
-      - mysqlDB
-    depends_on:
-      - mysqlDB
 
   mysqlDB:
     image: mysql:latest
@@ -23,9 +11,43 @@ services:
       MYSQL_USER: joc 
       MYSQL_PASSWORD: 7
     ports:
-      - 3307:3306
+      - 3308:3306
+    networks:
+      - joc_net
     volumes:
       - mysqldata:/var/lib/mysql
+    # Afegeixo per retardar entrada de la app
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root --password=root_password"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 5s
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Joc_svc
+    ports:
+      - 3001:3001
+    networks:
+      - joc_net
+    links:
+      - mysqlDB
+    depends_on:
+      mysqlDB:
+        condition: service_healthy  # Comprovant que el servidor estigui actiu i receptiu
+    # environment:
+    #   - DB_HOST=mysqlDB
+    #   - DB_PORT=3306
+    #   - DB_USER=joc
+    #   - DB_PASSWORD=7
+    #   - DB_NAME=joc_de_daus
 
 volumes: 
-  mysqldata:
+  mysqldata: {}
+
+networks:
+  joc_net:
+    driver: bridge
