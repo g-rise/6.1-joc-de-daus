@@ -5,12 +5,14 @@ import defineAssociations from '../../models/MySql/association.models'
 
 const dbConnection = async () => {
   try {
+    const models = sequelize.modelManager.models.map(model => model.name)
+    console.log('Models:', models)
     await sequelize.authenticate()
     console.log('Connexió realitzada amb la base de dades')
     defineAssociations()
     // Verificació dels models de sequelize
-    const models = sequelize.modelManager.models.map(model => model.name)
-    console.log('Models:', models)
+    // const models = sequelize.modelManager.models.map(model => model.name)
+    // console.log('Models:', models)
   } catch (error) {
     console.error('No es pot connectar amb la base de dades:', error)
   }
