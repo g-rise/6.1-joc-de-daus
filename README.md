@@ -95,7 +95,7 @@ Es importante documentar la API de manera clara y concisa. Aquí se incluye info
 
 ## Diagrama de Estructura de la Base de Datos
 
-![Diagrama de la Base de Datos](./diagramaER.jpg)
+![Diagrama de la Base de Datos](./documents/diagramaER.jpg)
 
 
 ## Testing
