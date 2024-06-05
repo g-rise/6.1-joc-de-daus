@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Riccardo\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Riccardo Cuor di Leone\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -89,6 +89,62 @@
 			"response": []
 		},
 		{
+			"name": "POST/players --> Luigi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Luigi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/players --> Fancazzista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fancazzista\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET/players (with success rate)",
 			"request": {
 				"method": "GET",
@@ -108,7 +164,7 @@
 			"response": []
 		},
 		{
-			"name": "PUT/players/1 --> \"name\"",
+			"name": "PUT/players/2 --> \"name\"",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -122,7 +178,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3001/players/1",
+					"raw": "http://localhost:3001/players/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -130,7 +186,7 @@
 					"port": "3001",
 					"path": [
 						"players",
-						"1"
+						"2"
 					]
 				}
 			},
@@ -177,6 +233,66 @@
 			"response": []
 		},
 		{
+			"name": "POST/games/1 --> 3ª Jugada player 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/1 --> 4ª Jugada player 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/1 --> 5ª Jugada player 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "POST/games/2 --> 1ª Jugada player 2",
 			"request": {
 				"method": "POST",
@@ -198,6 +314,66 @@
 		},
 		{
 			"name": "POST/games/2 --> 2ª Jugada player 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/2 --> 3ª Jugada player 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/2 --> 4ª Jugada player 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/2 --> 5ª Jugada player 2",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -271,6 +447,265 @@
 					"path": [
 						"games",
 						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 4ª Jugada player 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 5ª Jugada player 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 1ª Jugada player 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 2ª Jugada player 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 3ª Jugada player 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 4ª Jugada player 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 5ª Jugada player 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 1ª Jugada player 5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 2ª Jugada player 5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 3ª Jugada player 5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 4ª Jugada player 5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/games/3 --> 5ª Jugada player 5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/games/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"games",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/players (with success rate) Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"players"
 					]
 				}
 			},
