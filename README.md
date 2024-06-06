@@ -60,28 +60,45 @@ La aplicación está construida siguiendo el principio de **Arquitectura Hexagon
 
 La estructura de archivos del proyecto es la siguiente:
 
-```plaintext
+.
 ├── documents
 ├── src
 │   ├── application
-│   │  
+│   │   ├── delete-all-games.ts
+│   │   ├── find-player-by-id.ts
+│   │   ├── find-player-by-name.ts
+│   │   ├── get-all-players-and-success.ts
+│   │   ├── get-loser.ts
+│   │   ├── get-rankings.ts
+│   │   ├── get-winner.ts
+│   │   ├── list-all-games-for-player.ts
+│   │   ├── modify-player-name.ts
+│   │   ├── play-game.ts
+│   │   └── player-creator.ts
 │   ├── domain
-│   │  
+│   │   ├── game
+│   │   ├── player
+│   │   ├── ranking
+│   │   └── utilities
 │   ├── infrastructure
-│   │   
+│   │   ├── controllers
+│   │   ├── database
+│   │   │   └── MySql
+│   │   ├── models
+│   │   │   └── MySql
+│   │   ├── repositories
+│   │   │   └── MySql
+│   │   └── routes
 │   ├── test
+│   │   ├── delete-all-games.test.ts
+│   │   ├── find-player-by-id.test.ts
+│   │   ├── find-player-by-name.test.ts
+│   │   ├── list-all-games-for-player.test.ts
+│   │   ├── modify-player-name.test.ts
+│   │   ├── play-game.test.ts
+│   │   └── player-creator.test.ts
 │   └── app.ts
-├── .env
-├── .eslintignore
-├── .eslintrc
-├── .gitignore
-├── .prettierrc
-├── Dockerfile
-├── README.md
-├── docker-compose.yml
-├── package-lock.json
-├── package.json
-└── tsconfig.json
+
 ```
 
 ## Instalación y Uso
