@@ -123,7 +123,7 @@ Si necesitas limpiar y reiniciar el entorno de Docker, puedes seguir estos pasos
 
 ## Testing
 
-Para comprobar el correcto funcionamiento de la aplicación se ha testeado principalemnete unos cuantos casos de uso. Utiliza `npm run test` para ejecutar las pruebas unitarias.
+Para comprobar el correcto funcionamiento de la aplicación se ha testeado principalmente unos cuantos casos de uso. Utiliza `npm run test` para ejecutar las pruebas unitarias.
 
 
 ## Licencia
