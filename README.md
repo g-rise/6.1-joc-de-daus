@@ -52,16 +52,44 @@ Este proyecto utiliza una variedad de tecnologías modernas para su desarrollo, 
 - **Sequelize:** ORM para la gestión de la base de datos MySQL.
 - **Docker:** Para la creación de instancias de bases de datos y contenedorización de la aplicación.
 
+## Arquitectura Hexagonal
+
+La aplicación está construida siguiendo el principio de **Arquitectura Hexagonal**, también conocida como arquitectura de puertos y adaptadores. Esto asegura que la lógica central del negocio (el dominio) esté completamente aislada de los detalles técnicos, permitiendo una mayor modularidad, facilidad de prueba y adaptabilidad a cambios futuros.
+
+## Estructura de Archivos
+
+La estructura de archivos del proyecto es la siguiente:
+
+```plaintext
+├── documents
+├── src
+│   ├── application
+│   │  
+│   ├── domain
+│   │  
+│   ├── infrastructure
+│   │   
+│   ├── test
+│   └── app.ts
+├── .env
+├── .eslintignore
+├── .eslintrc
+├── .gitignore
+├── .prettierrc
+├── Dockerfile
+├── README.md
+├── docker-compose.yml
+├── package-lock.json
+├── package.json
+└── tsconfig.json
+```
 
 ## Instalación y Uso
 
 Para obtener una copia local en funcionamiento, sigue estos pasos:
 
 1. Clona el repositorio.
-2. Instala las dependencias con `npm install`.
-3. Configura las variables de entorno según el archivo `.env`.
-4. Construye y levanta los contenedores de Docker con `docker-compose up --build`.
-5. Ejecuta el entorno de desarrollo con `npm run dev`.
+2. Construye y levanta los contenedores de Docker con `docker-compose up`.
    
 
 ### Manejo de Docker
@@ -88,11 +116,6 @@ Si necesitas limpiar y reiniciar el entorno de Docker, puedes seguir estos pasos
     docker compose up
     ```
 
-## Documentación de la API
-
-Es importante documentar la API de manera clara y concisa. Aquí se incluye información sobre las rutas, los parámetros y las respuestas esperadas. Se recomienda utilizar plataformas como Postman o Insomnia para realizar y documentar las comprobaciones.
-
-
 ## Diagrama de Estructura de la Base de Datos
 
 ![Diagrama de la Base de Datos](./documents/diagramaER.jpg)
@@ -100,14 +123,12 @@ Es importante documentar la API de manera clara y concisa. Aquí se incluye info
 
 ## Testing
 
-Se han añadido pruebas para comprobar el correcto funcionamiento de la aplicación. Utiliza `npm test` para ejecutar las pruebas unitarias.
+Para comprobar el correcto funcionamiento de la aplicación se ha testeado principalmente unos cuantos casos de uso. Utiliza `npm run test` para ejecutar las pruebas unitarias.
 
-## Integración Continua
-
-Se ha implementado CI (Integración Continua) con GitHub Actions para asegurar que todos los cambios en el repositorio cumplen con los estándares de calidad establecidos.
 
 ## Licencia
 
 Este proyecto está bajo la Licencia ISC. Vea el archivo LICENSE para más detalles.
+
 
 
