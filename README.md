@@ -60,7 +60,7 @@ La aplicación está construida siguiendo el principio de **Arquitectura Hexagon
 
 La estructura de archivos del proyecto es la siguiente:
 
-.
+```
 ├── documents
 ├── src
 │   ├── application
